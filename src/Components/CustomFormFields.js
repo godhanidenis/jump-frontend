@@ -20,7 +20,7 @@ const CustomTextField = styled(TextField)(({ theme }) => ({
     color: "#fff",
     fontSize: "18px",
     fontStyle: "normal",
-    fontWeight: 325,
+    fontWeight: 300,
     lineHeight: "28px",
     "&::placeholder": {
       color: "#fff",

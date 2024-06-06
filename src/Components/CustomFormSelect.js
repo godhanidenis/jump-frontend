@@ -17,7 +17,7 @@ const CustomOutlinedInput = styled(OutlinedInput)(({ theme }) => ({
   "& .MuiInputBase-input": {
     fontSize: "18px",
     fontStyle: "normal",
-    fontWeight: 325,
+    fontWeight: 300,
     lineHeight: "28px",
   },
   borderRadius: "8px",
