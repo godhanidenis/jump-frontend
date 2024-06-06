@@ -1,0 +1,78 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.MuiMenu-paper {
+  background-color: #22224A  !important;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-container > .swiper-slide__content {
+  position: absolute;
+  top: 0;
+}
+
+.swiper-slide {
+  height: 300px;
+  display: flex;
+  background: #eee;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms linear;
+  transform: scale(0.8);
+}
+
+.swiper-slide-active {
+  transform: scale(1);
+  background: #fc0;
+}
+
+.swiper-slide__content {
+  height: 300px;
+}
