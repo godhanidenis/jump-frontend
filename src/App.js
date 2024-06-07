@@ -19,7 +19,7 @@ const App = () => {
         className="w-full h-1"
         style={{
           background:
-            "var(--yellow-peach, linear-gradient(90deg, #FFC958 0%, #FE7B94 100%))",
+            "linear-gradient(90deg, #ffd873, #ffb080 10%, #ff6e98 30%, #f176bb 40%, #e87dd4 50%, #7dc2ff 80%, #bcf28f)",
         }}
       />
       <Footer />

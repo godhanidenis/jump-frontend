@@ -51,7 +51,7 @@ const LogoCarousel = () => {
 
   const CustomLeftButton = () => {
     return (
-      <div className="absolute top-[15%] flex left-1 z-10">
+      <div className="absolute top-[15%] flex left-0 z-10">
         <ArrowBackIosIcon
           onClick={prevSlide}
           className="cursor-pointer text-[#f7cb6b]"
@@ -61,7 +61,7 @@ const LogoCarousel = () => {
   };
   const CustomRightButton = () => {
     return (
-      <div className="absolute right-1 top-[15%] flex z-10">
+      <div className="absolute right-0 top-[15%] flex z-10">
         <ArrowForwardIosIcon
           onClick={nextSlide}
           className="cursor-pointer text-[#f7cb6b]"
@@ -73,7 +73,7 @@ const LogoCarousel = () => {
   return (
     <div className="mt-[32.5px] w-full">
       <span
-        className="text-[#fff] w-full flex items-center justify-center text-[25px] not-italic font-normal leading-[35px]"
+        className="text-[#fff] w-full flex items-center justify-center text-[25px] not-italic font-normal leading-[35px] text-center"
         style={{
           textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
         }}
@@ -100,7 +100,7 @@ const LogoCarousel = () => {
                 key={index}
                 className="flex items-center justify-center w-16 h-8"
               >
-                <img src={itm} alt="logos" className="w-full h-full" />
+                <img src={itm} alt="logos" className="w-full h-full object-contain" />
               </div>
             )
           )}

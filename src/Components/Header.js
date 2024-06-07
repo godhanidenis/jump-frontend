@@ -31,7 +31,7 @@ const Header = () => {
               {navLinks.map((nav, index) => (
                 <li
                   key={index}
-                  className="cursor-pointer text-[18px] text-center leading-[28px] font-normal not-italic text-[#fff] hover:scale-110"
+                  className="cursor-pointer text-[18px] text-center leading-[28px] font-normal not-italic text-[#fff] hover:scale-110 transition-all duration-300"
                 >
                   {nav.name}
                 </li>

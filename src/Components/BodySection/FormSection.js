@@ -25,7 +25,7 @@ const FormSection = () => {
   const onError = (errors) => console.log("Errors Occurred !! :", errors);
 
   return (
-    <div className="lg:w-1/2 w-full md:pr-5 flex flex-col gap-5">
+    <div className="lg:w-[40%] w-full md:pr-5 flex flex-col gap-5">
       <div className="flex flex-col gap-3">
         <span className="text-[#fff] text-[18px] not-italic font-normal leading-[28px]">
           What is your name?
@@ -105,7 +105,7 @@ const FormSection = () => {
       </div>
       <div className="w-auto sm:mx-[25px] mt-5 md:mt-[55.5px]">
         <button
-          className="w-full rounded-[5px] text-[#32327A] text-center text-[16px] not-italic font-normal leading-[60px] hover:scale-95 transition-all duration-300"
+          className="w-full rounded-[5px] text-[#32327A] text-center text-[15px] not-italic font-normal leading-[60px] hover:scale-95 transition-all duration-300"
           style={{
             background:
               "var(--yellow-peach, linear-gradient(90deg, #FFC958 0%, #FE7B94 100%))",
