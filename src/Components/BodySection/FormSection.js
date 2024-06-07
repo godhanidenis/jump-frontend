@@ -20,6 +20,14 @@ const FormSection = () => {
 
   const onSubmit = async (data) => {
     console.log("data-->>", data);
+    if (data.company_size === "50+") {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "size50plus",
+        employeeSize: data.company_size,
+      });
+      console.log("window.dataLayer :-", window.dataLayer);
+    }
   };
 
   const onError = (errors) => console.log("Errors Occurred !! :", errors);
@@ -78,6 +86,7 @@ const FormSection = () => {
           control={control}
           rules={{ required: "Company size is required" }}
           placeholder="Total Employee Size"
+          options={["0-10", "10-25", "25-49", "50+"]}
         />
         {errors?.company_size && (
           <p className="text-[#FF0000] font-semibold text-[12px]">
@@ -96,6 +105,12 @@ const FormSection = () => {
           rules={{ required: "Marketing Challenges is required" }}
           placeholder="Choose multiple options"
           multiple
+          options={[
+            "Difficulty in attracting new customers",
+            "Limited brand recognition",
+            "Low volume of high-quality leads",
+            "Ineffective lead generation strategies",
+          ]}
         />
         {errors?.marketing_challenges && (
           <p className="text-[#FF0000] font-semibold text-[12px]">

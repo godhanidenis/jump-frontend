@@ -76,13 +76,13 @@ const MenuProps = {
     // },
   },
 };
-const names = ["Oliver", "Harry", "George", "Jack", "Jacob"];
 
 export const CustomFormSelect = ({
   name,
   control,
   rules,
   placeholder,
+  options,
   ...props
 }) => {
   return (
@@ -117,7 +117,7 @@ export const CustomFormSelect = ({
             IconComponent={(props) => <KeyboardArrowDownIcon {...props} />}
             MenuProps={MenuProps}
           >
-            {names.map((name) => (
+            {options.map((name) => (
               <CustomMenuItem key={name} value={name}>
                 {props.multiple && (
                   <CustomCheckbox checked={field.value?.indexOf(name) > -1} />
