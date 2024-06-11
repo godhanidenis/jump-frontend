@@ -19,14 +19,35 @@ const FormSection = () => {
   });
 
   const onSubmit = async (data) => {
-    console.log("data-->>", data);
-    if (data.company_size === "50+") {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "size50plus",
-        employeeSize: data.company_size,
+    try {
+      if (data.company_size === "50+") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "size50plus",
+          employeeSize: data.company_size,
+        });
+      }
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const dataWithUrlParams = {
+        ...data,
+        utm_source: urlParams.get("utm_source") || "",
+        utm_medium: urlParams.get("utm_medium") || "",
+        utm_campaign: urlParams.get("utm_campaign") || "",
+        utm_term: urlParams.get("utm_term") || "",
+        utm_content: urlParams.get("utm_content") || "",
+      };
+
+      await fetch("https://hooks.zapier.com/hooks/catch/19123535/2o6gibp/", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(dataWithUrlParams),
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
-      console.log("window.dataLayer :-", window.dataLayer);
+    } catch (e) {
+      console.error("Error Occurred !!", e);
     }
   };
 
