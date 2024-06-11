@@ -3,8 +3,10 @@ import LogoCarousel from "./LogoCarousel";
 import { FormInputField } from "../CustomFormFields";
 import { useForm } from "react-hook-form";
 import { CustomFormSelect } from "../CustomFormSelect";
+import { useNavigate } from "react-router-dom";
 
 const FormSection = () => {
+  const navigate = useNavigate();
   const {
     control,
     handleSubmit,
@@ -29,6 +31,8 @@ const FormSection = () => {
         });
       }
 
+      console.log("window.location.search", window.location.search);
+
       const urlParams = new URLSearchParams(window.location.search);
       const dataWithUrlParams = {
         ...data,
@@ -47,6 +51,8 @@ const FormSection = () => {
           "Content-Type": "application/json",
         },
       });
+
+      navigate("/confirmation");
     } catch (e) {
       console.error("Error Occurred !!", e);
     }
@@ -90,7 +96,7 @@ const FormSection = () => {
               message: "Please enter a valid email",
             },
           }}
-          placeholder="Type your answer"
+          placeholder="i.e hello@jump450.com"
         />
         {errors?.company_email && (
           <p className="text-[#FF0000] font-semibold text-[12px]">

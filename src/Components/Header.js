@@ -3,8 +3,10 @@ import jumpLogo from "../Assets/Jump Logo White 2.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import MobileHeader from "./MobileHeader";
 import { navLinks } from "../utils/navLinks";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const mobileMenuStyle = isMenuOpen ? "-translate-x-0" : "translate-x-full";
@@ -22,6 +24,7 @@ const Header = () => {
             src={jumpLogo}
             className="w-[76px] h-[44px] cursor-pointer"
             alt="Logo"
+            onClick={() => navigate("/")}
           />
         </div>
 
@@ -45,7 +48,10 @@ const Header = () => {
           >
             <MenuIcon className="!text-[#fff] text-[20px]" fontSize="large" />
           </button>
-          <button className="hidden lg:flex bg-[#FFC958] rounded-[5px] px-5 sm:px-10 lg:px-[54px] text-[16px] text-center text-[#32327A] leading-10 sm:leading-[50px] lg:leading-[60px] font-normal not-italic hover:scale-95 transition-all duration-300">
+          <button
+            className="hidden lg:flex bg-[#FFC958] rounded-[5px] px-5 sm:px-10 lg:px-[54px] text-[16px] text-center text-[#32327A] leading-10 sm:leading-[50px] lg:leading-[60px] font-normal not-italic hover:scale-95 transition-all duration-300"
+            onClick={() => navigate("/")}
+          >
             GROW WITH US
           </button>
         </div>

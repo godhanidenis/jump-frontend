@@ -9,7 +9,7 @@ const ConfirmationComponent = () => {
         </h3>
       </div>
       <div className="h-full flex justify-center">
-        <h3 className="mt-10 text-3xl font-bold text-[#FFC958] w-full flex justify-center">
+        <h3 className="mt-10 text-2xl sm:text-3xl font-bold text-[#FFC958] w-full flex justify-center text-center">
           Thanks For Registaring With Us!
         </h3>
       </div>
