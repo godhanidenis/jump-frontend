@@ -19,8 +19,8 @@ const FormSection = () => {
   });
 
   const onSubmit = async (data) => {
-    console.log("Data To Be Submitted!", data);
     try {
+      console.log("Data -->!", data);
       if (data.company_size === "50+") {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
